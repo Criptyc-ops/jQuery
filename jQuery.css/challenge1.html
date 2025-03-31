@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifying CSS using jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+        <div class="highlight">Highlight This Text with new styles.</div>
+        <div>This is our un-highlight div tag</div>
+        <script>
+            // use the .ready method to start
+
+            //use .css change the #highlight div font size 20px, and background color yellow
+            $('document').ready(function(){
+                $('.highlight').css({
+                    'font-size' : '20px',
+                    'background-color' : "yellow"
+                });
+            })
+        </script>
+</body>
+</html>
