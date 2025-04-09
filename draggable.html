@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery UI Draggable - default functionality</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+
+<!-- jQuery UI JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            background-color: lightblue;
+            border: 1px solid blue;
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            $("#draggable").draggable();
+        });
+        $(function() {
+            $("#draggable").draggable({
+                revert: true
+            });
+        });
+    
+        $(function() {
+            $("#draggable").draggable({
+                revert: "invalid"
+            });
+        });
+
+        
+    </script>
+</head>
+<body>
+    <div id="draggable">
+        <p>Drag me around or die</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI droppable</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        #draggable {
+            width: 100px;
+            height: 100px;
+            padding: 0.5em;
+            float:left;
+            margin: 10px 10px 10px 0;
+            background-color: lightblue;
+            border: 1px solid blue;
+        }
+
+        #droppable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            float: left;
+            margin: 10px;
+            background-color: lightgreen;
+            border: 1px solid green;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div id="draggable" class="ui-widget-content">
+        <p>drag me to tjMax</p>
+    </div>
+
+    <div id="droppable" class="ui-widget-content">
+        <p>TJMAX</p>
+    </div>
+    <script>
+        $(function() {
+            $("#draggable").draggable();
+            $("#droppable").droppable({
+                drop: function(event, ui) {
+                    $(this).addClass("ui-state-highlight")
+                        .find("p")
+                        .html("Dropped!");
+                }
+            });
+        });  
+        </script>
+</body>
+</html>

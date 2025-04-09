@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.animate grow</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        div{
+            height:50px;
+            width: 50px;
+            border: 1px solid black;
+            background-color: purple;
+
+            
+        }
+
+        #grow{
+            margin-bottom: 5px;
+            margin-left: 45px;
+        }
+    </style>
+</head>
+<body>
+    <button id="grow">Grow</button>
+
+
+    <div></div>
+
+    <button id="animate">initiate animation</button>
+    <div id="box"></div>
+    <script>
+        $('#grow').click(function(){
+            $('div').animate({height:'300px', width: "900px"},'slow');
+        })
+
+        $('#animate').click(function(){
+            $('#box').animate({height:'300px', width: "300px"}, 'slow');
+            $('#box').animate({height:'50px', width: '50px'}, 'slow');
+            $('#box').animate({left:'400px'}, 'slow');
+            $('#box').animate({left:'0px'},'slow');
+        });
+    </script>
+</body>
+</html>
